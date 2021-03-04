@@ -2,7 +2,7 @@
 
 # config
 __pkg__ = 'seqm'
-__url__ = 'https://github.com/genova-io/seqm'
+__url__ = 'https://github.com/atgtag/seqm'
 __info__ = 'Utilities for calculating sequence metrics.'
 __author__ = 'Blake Printy'
 __email__ = 'bprinty@gmail.com'
