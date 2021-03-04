@@ -1,5 +1,6 @@
+====
 seqm
-========
+====
 
 Python utilities for sequence comparison, quantification, and feature extraction.
 
@@ -80,27 +81,27 @@ Sequence Quantification
 +---------------------------------+------------------------------------------------------------+
 | Function                        | Metric                                                     |
 +=================================+============================================================+
-| ``seqm.polydict``           | Length of longest homopolymer for all bases in sequence.   |
+| ``seqm.polydict``               | Length of longest homopolymer for all bases in sequence.   |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.polylength``         | Length of longest homopolymer in sequence.                 |
+| ``seqm.polylength``             | Length of longest homopolymer in sequence.                 |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.entropy``            | Shannon entropy for bases in sequence.                     |
+| ``seqm.entropy``                | Shannon entropy for bases in sequence.                     |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.gc_percent``         | Percentage of GC bases in sequence relative to all bases.  |
+| ``seqm.gc_percent``             | Percentage of GC bases in sequence relative to all bases.  |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.gc_skew``            | GC skew for sequence:  (#G - #C)/(#G + #C).                |
+| ``seqm.gc_skew``                | GC skew for sequence:  (#G - #C)/(#G + #C).                |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.gc_shift``           | GC shift for sequence: (#A + #T)/(#G + #C)                 |
+| ``seqm.gc_shift``               | GC shift for sequence: (#A + #T)/(#G + #C)                 |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.dna_weight``         | Molecular weight for sequence with DNA backbone.           |
+| ``seqm.dna_weight``             | Molecular weight for sequence with DNA backbone.           |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.rna_weight``         | Molecular weight for sequence with RNA backbone.           |
+| ``seqm.rna_weight``             | Molecular weight for sequence with RNA backbone.           |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.aa_weight``          | Molecular weight for amino acid sequence.                  |
+| ``seqm.aa_weight``              | Molecular weight for amino acid sequence.                  |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.tm``                 | Melting temperature of sequence.                           |
+| ``seqm.tm``                     | Melting temperature of sequence.                           |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.zipsize``            | Compressibility of sequence.                               |
+| ``seqm.zipsize``                | Compressibility of sequence.                               |
 +---------------------------------+------------------------------------------------------------+
 
 
@@ -110,17 +111,17 @@ Domain Conversion
 +---------------------------------+------------------------------------------------------------+
 | Function                        | Conversion                                                 |
 +=================================+============================================================+
-| ``seqm.revcomplement``      | Length of longest homopolymer for all bases in sequence.   |
+| ``seqm.revcomplement``          | Length of longest homopolymer for all bases in sequence.   |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.complement``         | Length of longest homopolymer in sequence.                 |
+| ``seqm.complement``             | Length of longest homopolymer in sequence.                 |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.aa``                 | Shannon entropy for bases in sequence.                     |
+| ``seqm.aa``                     | Shannon entropy for bases in sequence.                     |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.wrap``               | Percentage of GC bases in sequence relative to all bases.  |
+| ``seqm.wrap``                   | Percentage of GC bases in sequence relative to all bases.  |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.likelihood``         | GC skew for sequence:  (#G - #C)/(#G + #C).                |
+| ``seqm.likelihood``             | GC skew for sequence:  (#G - #C)/(#G + #C).                |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.qscore``             | GC shift for sequence: (#A + #T)/(#G + #C)                 |
+| ``seqm.qscore``                 | GC shift for sequence: (#A + #T)/(#G + #C)                 |
 +---------------------------------+------------------------------------------------------------+
 
 
@@ -130,9 +131,9 @@ Distance Metrics
 +---------------------------------+------------------------------------------------------------+
 | Function                        | Distance Metric                                            |
 +=================================+============================================================+
-| ``seqm.hamming``            | Hamming distance between sequences.                        |
+| ``seqm.hamming``                | Hamming distance between sequences.                        |
 +---------------------------------+------------------------------------------------------------+
-| ``seqm.edit``               | Edit (levenshtein) distance between sequences              |
+| ``seqm.edit``                   | Edit (levenshtein) distance between sequences              |
 +---------------------------------+------------------------------------------------------------+
 
 
@@ -142,9 +143,9 @@ Utilities
 +------------------------------------+------------------------------------------------------------+
 | Function                           | Utility                                                    |
 +====================================+============================================================+
-| ``seqm.random_sequence``       | Generate random sequence.                                  |
+| ``seqm.random_sequence``           | Generate random sequence.                                  |
 +------------------------------------+------------------------------------------------------------+
-| ``seqm.wrap``                  | Newline-wrap sequence                                      |
+| ``seqm.wrap``                      | Newline-wrap sequence                                      |
 +------------------------------------+------------------------------------------------------------+
 
 
