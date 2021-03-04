@@ -55,7 +55,7 @@ Sequence Similarity Metrics
 Sequence-Related Utilities
 ==========================
 
-.. autofunction:: random_sequence
+.. autofunction:: random
 
 .. autofunction:: wrap
 

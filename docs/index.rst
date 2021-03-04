@@ -8,7 +8,7 @@ Overview
 
 This package provides python utilities for sequence comparison, quantification, and feature extraction.
 
-The `seqm <https://github.com/genova-io/seqm>`_ module contains functions for calculating sequence-related distance and complexity metrics, commonly used in language processing and next-generation sequencing:
+The `seqm <https://github.com/atgtag/seqm>`_ module contains functions for calculating sequence-related distance and complexity metrics, commonly used in language processing and next-generation sequencing:
 
 .. code-block:: python
 
