@@ -78,12 +78,15 @@ Finally, all functions from the ``seqm`` module can be used at the command line:
 
 .. code-block:: bash
 
-    ~$ seqm hamming AAAACCGT AAAAGCGT
+    ~$ # calculate distance between sequences
+    ~$ seqm edit AAAACCGT AAAAGCGT
     1
 
+    ~$ # calculate gc percent of sequence
     ~$ seqm gc_percent AAAACCGT
     0.375
 
+    ~$ # generate random sequence and pipe to `wrap` command
     ~$ seqm random --length 10 | seqm wrap --bases 5 -
     ATGGA
     TATTA
