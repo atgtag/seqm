@@ -74,6 +74,20 @@ It also has a ``Sequence`` object for object-based access to these properties:
 
 All of the metrics available in the repository are listed below, and can also be found in the `API <http://github.com/genova-io/seqm/latest/api.html>`_ section of the documentation.
 
+Finally, all functions from the ``seqm`` module can be used at the command line:
+
+.. code-block:: bash
+
+    ~$ seqm hamming AAAACCGT AAAAGCGT
+    1
+
+    ~$ seqm gc_percent AAAACCGT
+    0.375
+
+    ~$ seqm random --length 10 | seqm wrap --bases 5 -
+    ATGGA
+    TATTA
+
 
 Sequence Quantification
 +++++++++++++++++++++++
