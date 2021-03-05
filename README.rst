@@ -1,3 +1,21 @@
+
+|Build status| |Code coverage| |Maintenance yes| |GitHub license| |Documentation Status|
+
+.. |Build status| image:: https://travis-ci.com/atgtag/seqm.png?branch=master
+   :target: https://travis-ci.com/atgtag/seqm
+
+.. |Code coverage| image:: https://codecov.io/gh/atgtag/seqm/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/atgtag/seqm
+
+.. |Maintenance yes| image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
+   :target: https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity
+
+.. |GitHub license| image:: https://img.shields.io/github/license/Naereen/StrapDown.js.svg
+   :target: https://github.com/atgtag/seqm/blob/master/LICENSE
+
+.. |Documentation Status| image:: https://readthedocs.org/projects/seqm/badge/?version=latest
+   :target: http://seqm.readthedocs.io/?badge=latest
+
 ====
 seqm
 ====
