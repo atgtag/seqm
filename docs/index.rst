@@ -6,9 +6,7 @@
 Overview
 ========
 
-This package provides python utilities for sequence comparison, quantification, and feature extraction.
-
-The `seqm <https://github.com/atgtag/seqm>`_ module contains functions for calculating sequence-related distance and complexity metrics, commonly used in language processing and next-generation sequencing:
+The `seqm <http://github.com/atgtag/seqm>`_ module contains functions for calculating sequence-related distance and complexity metrics, commonly used in language processing and next-generation sequencing. It has a simple and consistent API that be used for investigating sequence characteristics:
 
 .. code-block:: python
 
@@ -35,6 +33,8 @@ The `seqm <https://github.com/atgtag/seqm>`_ module contains functions for calcu
     4082.59
     >>> seqm.aa_weight('AGGATAAG')
     700.8
+    >>> seqm.tm('AGGATAAGAGATAGATTT')
+    39.31
     >>> seqm.zipsize('AGGATAAGAGATAGATTT')
     22
 

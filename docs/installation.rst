@@ -20,7 +20,7 @@ To install the latest version of the project from source, close the repository f
 
 .. code-block:: bash
 
-    $ git clone http://github.com/genova-io/seqm.git
+    $ git clone http://github.com/atgtag/seqm.git
     $ cd seqm
     $ python setup.py install
 
@@ -28,4 +28,4 @@ To install the latest version of the project from source, close the repository f
 Questions/Feedback
 ==================
 
-File an issue in the `GitHub issue tracker <https://github.com/genova-io/seqm/issues>`_.
+File an issue in the `GitHub issue tracker <https://github.com/atgtag/seqm/issues>`_.

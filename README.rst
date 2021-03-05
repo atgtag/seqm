@@ -16,13 +16,13 @@ Installation
 Documentation
 =============
 
-Documentation for the package can be found `here <http://github.com/genova-io/seqm/latest/index.html>`_.
+Documentation for the package can be found `here <http://github.com/atgtag/seqm/latest/index.html>`_.
 
 
 Usage
 -----
 
-The `seqm <http://github.com/genova-io/seqm/latest/index.html>`_ module contains functions for calculating sequence-related distance and complexity metrics, commonly used in language processing and next-generation sequencing. It has a simple and consistent API that be used for investigating sequence characteristics:
+The `seqm <http://github.com/atgtag/seqm/latest/index.html>`_ module contains functions for calculating sequence-related distance and complexity metrics, commonly used in language processing and next-generation sequencing. It has a simple and consistent API that be used for investigating sequence characteristics:
 
 .. code-block:: python
 
@@ -72,7 +72,7 @@ It also has a ``Sequence`` object for object-based access to these properties:
     >>> # ... and so on ...
 
 
-All of the metrics available in the repository are listed below, and can also be found in the `API <http://github.com/genova-io/seqm/latest/api.html>`_ section of the documentation.
+All of the metrics available in the repository are listed below, and can also be found in the `API <http://github.com/atgtag/seqm/latest/api.html>`_ section of the documentation.
 
 Finally, all functions from the ``seqm`` module can be used at the command line:
 

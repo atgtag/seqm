@@ -5,7 +5,7 @@ Usage
 Overview
 ========
 
-The `seqm <http://atgtag.github.io/seqm/latest>`_ module contains functions for calculating sequence-related distance and complexity metrics, commonly used in language processing and next-generation sequencing. It has a simple and consistent API that be used for investigating sequence characteristics:
+The `seqm <https://github.com/atgtag/seqm>`_ module contains functions for calculating sequence-related distance and complexity metrics, commonly used in language processing and next-generation sequencing. It has a simple and consistent API that be used for investigating sequence characteristics:
 
 .. code-block:: python
 
@@ -36,7 +36,7 @@ The `seqm <http://atgtag.github.io/seqm/latest>`_ module contains functions for 
     22
 
 
-It also has a :class:`seqm.Sequence` object for object-based access to these properties:
+It also has a `seqm.Sequence` object for object-based access to these properties:
 
 .. code-block:: python
 
@@ -50,7 +50,6 @@ It also has a :class:`seqm.Sequence` object for object-based access to these pro
     ACGTACGT
     >>> seq.dna_weight
     3895.59
-    >>> # ... and so on ...
 
 
 All of the metrics available in the repository are listed below, and can also be found in the `API <./api.html>`_ section of the documentation.
@@ -163,7 +162,16 @@ And finally, to supply command line arguments to a method, do the following:
 
 .. code-block:: bash
 
-    ~$ seqm wrap AGTAGTAGTAGTATAGTAGTAGTAGAAAAT bases=10
+    ~$ seqm wrap --bases=10 AGTAGTAGTAGTATAGTAGTAGTAGAAAAT
     AGTAGTAGTA
     GTATAGTAGT
     AGTAGAAAAT
+
+
+You can also pipe commands with the cli tool:
+
+.. code-block:: bash
+
+    ~$ seqm random --length 10 | seqm wrap --bases 5 -
+    ATGGA
+    TATTA
