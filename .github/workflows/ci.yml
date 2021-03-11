@@ -1,6 +1,11 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +29,7 @@ jobs:
           pytest
 
       - name: report
-      env:
-	CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      run: |
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: |
           codecov
