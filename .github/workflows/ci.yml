@@ -24,5 +24,7 @@ jobs:
           pytest
 
       - name: report
-        run: |
+      env:
+	CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      run: |
           codecov
