@@ -43,6 +43,7 @@ class TestMetrics:
         ('ACGT', 0.5),
         ('AAAAAAAAAAA', 0),
         ('ATGACTGAATATAAACTTGT', 0.25),
+        ('NNNNNNNNNNNNNN', 0),
     ))
     def test_gc_percent(self, sequence, res):
         assert round(pkg.gc_percent(sequence), 2) == res

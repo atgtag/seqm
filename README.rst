@@ -1,16 +1,16 @@
 
 |Build status| |Code coverage| |Maintenance yes| |GitHub license| |Documentation Status|
 
-.. |Build status| image:: https://travis-ci.com/atgtag/seqm.png?branch=master
-   :target: https://travis-ci.com/atgtag/seqm
+.. |Build status| image:: https://github.com/atgtag/seqm/actions/workflows/ci.yml/badge.svg
+   :target: https://github.com/atgtag/seqm/actions/workflows/ci.yml
 
-.. |Code coverage| image:: https://codecov.io/gh/atgtag/seqm/branch/master/graph/badge.svg
+.. |Code coverage| image:: https://codecov.io/gh/atgtag/seqm/branch/main/graph/badge.svg
    :target: https://codecov.io/gh/atgtag/seqm
 
 .. |Maintenance yes| image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
-   :target: https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity
+   :target: https://GitHub.com/atgtag/seqm/graphs/commit-activity
 
-.. |GitHub license| image:: https://img.shields.io/github/license/Naereen/StrapDown.js.svg
+.. |GitHub license| image:: https://img.shields.io/github/license/atgtag/seqm
    :target: https://github.com/atgtag/seqm/blob/master/LICENSE
 
 .. |Documentation Status| image:: https://readthedocs.org/projects/seqm/badge/?version=latest
