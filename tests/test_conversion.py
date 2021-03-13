@@ -16,6 +16,7 @@ class TestConversion:
         ('ACGT', 'ACGT'),
         ('AAAAAAAAAAA', 'TTTTTTTTTTT'),
         ('ATGACTGAATATAAACTTGT', 'ACAAGTTTATATTCAGTCAT'),
+        ('atgactgaatataaacttgt', 'acaagtttatattcagtcat'),
     ))
     def test_revcomplement(self, sequence, res):
         assert pkg.revcomplement(sequence) == res
@@ -25,6 +26,7 @@ class TestConversion:
         ('ACGT', 'TGCA'),
         ('AAAAAAAAAAA', 'TTTTTTTTTTT'),
         ('ATGACTGAATATAAACTTGT', 'TACTGACTTATATTTGAACA'),
+        ('atgactgaatataaacttgt', 'tactgacttatatttgaaca'),
     ))
     def test_complement(self, sequence, res):
         assert pkg.complement(sequence) == res
@@ -34,6 +36,7 @@ class TestConversion:
         ('ACGT', 'T'),
         ('GGGGGGGGGG', 'GGG'),
         ('ATGACTGAATATAAACTTGT', 'MTEYKL'),
+        ('ATGAcTgaaTAtaaACttGT', 'MTEYKL'),
     ))
     def test_aa(self, sequence, res):
         assert pkg.aa(sequence) == res

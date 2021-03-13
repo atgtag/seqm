@@ -43,6 +43,7 @@ def polydict(seq, nuc='ACGT'):
         {'A': 4, 'C': 2, 'G': 1, 'T': 1}
     """
     ret = {}
+    seq = seq.upper()
     for base in nuc:
         lens = []
         for i in re.findall(base + '+', seq):
@@ -63,7 +64,7 @@ def polylength(seq):
         >>> sequtils.polylength('AAAACCGT')
         4
     """
-    return max(polydict(seq).values())
+    return max(polydict(seq.upper()).values())
 
 
 def entropy(seq):
@@ -79,7 +80,7 @@ def entropy(seq):
         >>> sequtils.entropy('AAAACCGT')
         1.75
     """
-    cnt = [seq.count(i) for i in 'ACGT']
+    cnt = [seq.upper().count(i) for i in 'ACGT']
     d = sum(cnt)
     ent = []
     for i in [float(i)/d for i in cnt]:
@@ -101,7 +102,7 @@ def gc_percent(seq):
         >>> sequtils.gc_percent('AGGATAAG')
         0.375
     """
-    counts = [seq.count(i) for i in 'ACGTN']
+    counts = [seq.upper().count(i) for i in 'ACGTN']
     total = sum(counts)
     if total == 0:
         return 0
@@ -122,6 +123,7 @@ def gc_skew(seq):
         >>> sequtils.gc_skew('AGGATAAG')
         3.0
     """
+    seq = seq.upper()
     g = seq.count('G')
     c = seq.count('C')
     d = float(g + c)
@@ -143,6 +145,7 @@ def gc_shift(seq):
         >>> sequtils.gc_shift('AGGATAAG')
         1.67
     """
+    seq = seq.upper()
     g = seq.count('G')
     c = seq.count('C')
     a = seq.count('A')
@@ -168,7 +171,7 @@ def dna_weight(seq):
         3968.59
     """
     wmap = {'A': 491.2, 'C': 467.2, 'G': 507.2, 'T': 482.2, 'N': 487.0}
-    return sum([wmap[i] for i in seq])
+    return sum([wmap[i] for i in seq.upper()])
 
 
 def rna_weight(seq):
@@ -186,7 +189,7 @@ def rna_weight(seq):
         4082.59
     """
     wmap = {'A': 507.2, 'C': 483.2, 'G': 523.2, 'T': 484.2, 'U': 484.2, 'N': 499.5}
-    return sum([wmap[i] for i in seq])
+    return sum([wmap[i] for i in seq.upper()])
 
 
 def aa_weight(seq):
@@ -201,7 +204,7 @@ def aa_weight(seq):
         700.8
     """
     wmap = {'A': 89.1, 'R': 174.2, 'N': 132.1, 'D': 133.1, 'C': 121.2, 'E': 147.1, 'Q': 146.2, 'G': 75.1, 'H': 155.2, 'I': 131.2, 'L': 131.2, 'K': 146.2, 'M': 149.2, 'F': 165.2, 'P': 115.1, 'S': 105.1, 'T': 119.1, 'W': 204.2, 'Y': 181.2, 'V': 117.1}
-    return sum([wmap[i] for i in seq.replace('*', '')])
+    return sum([wmap[i] for i in seq.upper().replace('*', '')])
 
 
 def zipsize(seq):
@@ -215,4 +218,4 @@ def zipsize(seq):
         >>> sequtils.zipsize('AGGATAAGAGATAGATTT')
         39.31
     """
-    return len(compress(seq.encode()))
+    return len(compress(seq.upper().encode()))

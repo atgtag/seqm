@@ -29,7 +29,7 @@ def hamming(seq1, seq2):
         >>> hamming('AACCTT', 'AAGCCTT')
         1
     """
-    return sum(imap(str.__ne__, str(seq1), str(seq2)))
+    return sum(imap(str.__ne__, seq1.upper(), seq2.upper()))
 
 
 def edit(seq1, seq2):
@@ -45,4 +45,4 @@ def edit(seq1, seq2):
         >>> edit('banana', 'bahama')
         2
     """
-    return int(ed.eval(seq1, seq2))
+    return int(ed.eval(seq1.upper(), seq2.upper()))

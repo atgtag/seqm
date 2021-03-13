@@ -62,6 +62,7 @@ def aa(seq):
         M*
     """
     global codontable
+    seq = seq.upper()
     if codontable is None:
         # TODO: figure out the right place for the pre-computed information here
         bases = ['T', 'C', 'A', 'G']
@@ -116,4 +117,4 @@ def qscore(seq):
     Args:
         seq (str): Sequence of quality scores.
     """
-    return [ord(i)-33 for i in seq]
+    return [ord(i)-33 for i in seq.upper()]

@@ -16,6 +16,7 @@ class TestDistance:
         ('ACGT', 'ACGT', 0),
         ('AAAAAAAAAAA', 'AAAAAAATAAA', 1),
         ('ATGACTGAATATAAACTTGT', 'ATGACTCATTATGAACTTGT', 3),
+        ('ATGACTgaaTAtAAACttGT', 'ATGACTCATTATGAACTTGT', 3),
     ))
     def test_hamming(self, sequence, other, res):
         assert pkg.hamming(sequence, other) == res
@@ -25,6 +26,7 @@ class TestDistance:
         ('ACGT', 'ATGT', 1),
         ('AAAAAAAAAAA', 'AAAAAATAA', 3),
         ('ATGACTGAATATAAACTTGT', 'ATGACTGAATTAGTAAAAACTTGT', 4),
+        ('ATGACTgaaTAtAAACttGT', 'ATGACTGAATTAGTAAAAACTTGT', 4),
     ))
     def test_edit(self, sequence, other, res):
         assert pkg.edit(sequence, other) == res
