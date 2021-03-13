@@ -102,9 +102,10 @@ def gc_percent(seq):
         0.375
     """
     counts = [seq.count(i) for i in 'ACGTN']
-    if len(counts) == 0:
+    total = sum(counts)
+    if total == 0:
         return 0
-    gc = float(counts[1] + counts[2]) / sum(counts)
+    gc = float(counts[1] + counts[2]) / total
     return gc
 
 
