@@ -6,7 +6,7 @@ __url__ = 'https://github.com/atgtag/seqm'
 __info__ = 'Utilities for calculating sequence metrics.'
 __author__ = 'Blake Printy'
 __email__ = 'bprinty@gmail.com'
-__version__ = '0.0.3'
+__version__ = '0.1.0'
 
 
 # metrics
