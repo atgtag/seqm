@@ -166,6 +166,16 @@ class TestSequence:
         return
 
     @parameterized.expand((
+        ('ACGT', -46.51),
+        ('AAAAAAAAAAA', 16.78),
+        ('ATGACTGAATATAAACTTGT', 47.14),
+    ))
+    def test_tm(self, sequence, res):
+        obj = pkg.Sequence(sequence)
+        assert round(obj.tm, 2) == res
+        return
+
+    @parameterized.expand((
         ('ACGT', 2, 'AC\nGT'),
         ('AAAAAAAAAAA', 3, 'AAA\nAAA\nAAA\nAA'),
     ))

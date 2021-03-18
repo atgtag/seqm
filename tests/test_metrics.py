@@ -112,3 +112,13 @@ class TestMetrics:
     def test_zipsize(self, sequence, res):
         assert pkg.zipsize(sequence) == res
         return
+
+    @parameterized.expand((
+        ('ACGT', -46.51),
+        ('AAAAAAAAAAA', 16.78),
+        ('ATGACTGAATATAAACTTGT', 47.14),
+        ('atgactgaatataaacttgt', 47.14),
+    ))
+    def test_tm(self, sequence, res):
+        assert round(pkg.tm(sequence), 2) == res
+        return

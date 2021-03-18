@@ -7,7 +7,7 @@
 
 # imports
 # -------
-from cached_property import cached_property
+from cached_property import cached_property as cached
 from . import metrics
 from . import distance
 from . import utils
@@ -63,7 +63,7 @@ class Sequence(object):
         else:
             return other in self.sequence
 
-    @cached_property
+    @cached
     def revcomplement(self):
         """
         Wrapper around :func:`sequtils.revcomplement`
@@ -71,7 +71,7 @@ class Sequence(object):
         """
         return conversion.revcomplement(self.sequence)
 
-    @cached_property
+    @cached
     def complement(self):
         """
         Wrapper around :func:`sequtils.complement`
@@ -79,7 +79,7 @@ class Sequence(object):
         """
         return conversion.complement(self.sequence)
 
-    @cached_property
+    @cached
     def aa(self):
         """
         Wrapper around :func:`sequtils.aa`
@@ -87,7 +87,7 @@ class Sequence(object):
         """
         return conversion.aa(self.sequence)
 
-    @cached_property
+    @cached
     def polydict(self):
         """
         Wrapper around :func:`sequtils.polydict`
@@ -95,7 +95,7 @@ class Sequence(object):
         """
         return metrics.polydict(self.sequence)
 
-    @cached_property
+    @cached
     def polylength(self):
         """
         Wrapper around :func:`sequtils.polylength`
@@ -103,7 +103,7 @@ class Sequence(object):
         """
         return metrics.polylength(self.sequence)
 
-    @cached_property
+    @cached
     def entropy(self):
         """
         Wrapper around :func:`sequtils.entropy`
@@ -111,7 +111,7 @@ class Sequence(object):
         """
         return metrics.entropy(self.sequence)
 
-    @cached_property
+    @cached
     def gc_percent(self):
         """
         Wrapper around :func:`sequtils.gc_percent`
@@ -119,7 +119,7 @@ class Sequence(object):
         """
         return metrics.gc_percent(self.sequence)
 
-    @cached_property
+    @cached
     def gc_skew(self):
         """
         Wrapper around :func:`sequtils.gc_skew`
@@ -127,7 +127,7 @@ class Sequence(object):
         """
         return metrics.gc_skew(self.sequence)
 
-    @cached_property
+    @cached
     def gc_shift(self):
         """
         Wrapper around :func:`sequtils.gc_shift`
@@ -135,7 +135,7 @@ class Sequence(object):
         """
         return metrics.gc_shift(self.sequence)
 
-    @cached_property
+    @cached
     def dna_weight(self):
         """
         Wrapper around :func:`sequtils.dna_weight`
@@ -143,7 +143,7 @@ class Sequence(object):
         """
         return metrics.dna_weight(self.sequence)
 
-    @cached_property
+    @cached
     def rna_weight(self):
         """
         Wrapper around :func:`sequtils.rna_weight`
@@ -151,7 +151,7 @@ class Sequence(object):
         """
         return metrics.rna_weight(self.sequence)
 
-    @cached_property
+    @cached
     def aa_weight(self):
         """
         Wrapper around :func:`sequtils.aa_weight`
@@ -159,13 +159,21 @@ class Sequence(object):
         """
         return metrics.aa_weight(self.sequence)
 
-    @cached_property
+    @cached
     def zipsize(self):
         """
         Wrapper around :func:`sequtils.zipsize`
         for the :class:`sequtils.Sequence` object.
         """
         return metrics.zipsize(self.sequence)
+
+    @cached
+    def tm(self):
+        """
+        Wrapper around :func:`sequtils.zipsize`
+        for the :class:`sequtils.Sequence` object.
+        """
+        return metrics.tm(self.sequence)
 
     def wrap(self, bases=60):
         """

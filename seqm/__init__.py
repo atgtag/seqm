@@ -21,6 +21,7 @@ from .metrics import dna_weight
 from .metrics import rna_weight
 from .metrics import aa_weight
 from .metrics import zipsize
+from .metrics import tm
 
 
 # conversion

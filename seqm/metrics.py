@@ -7,9 +7,11 @@
 
 # imports
 # -------
-import string
-from zlib import compress
+import os
 import re
+import string
+import platform
+from zlib import compress
 from math import log
 from itertools import product
 
@@ -216,6 +218,45 @@ def zipsize(seq):
 
     Examples:
         >>> sequtils.zipsize('AGGATAAGAGATAGATTT')
-        39.31
+        22
     """
     return len(compress(seq.upper().encode()))
+
+
+def tm(seq, mv=50, dv=1.5, n=0.6, d=50, tp=1, sc=1):
+    """
+    Calculate size of gzip-compressed sequence.
+
+    Args:
+        seq (str): Sequence
+        mv (float): Concentration of monovalent cations in
+            mM, by default 50mM
+        dv (float): Concentration of divalent cations in
+            mM, by default 1.5mM
+        n (float): Concentration of deoxynycleotide triphosphate
+            in mM, by default 0.6mM
+        d (float): Concentration of DNA strands in nM, by
+            default 50nM
+        tp (int): Specifies the table of thermodynamic parameters and
+            the method of melting temperature calculation (default 1):
+             0  Breslauer et al., 1986 and Rychlik et al., 1990
+                (used by primer3 up to and including release 1.1.0).
+             1  Use nearest neighbor parameters from SantaLucia 1998
+        sc (int): Specifies salt correction formula for the melting
+            temperature calculation (default 1):
+             0  Schildkraut and Lifson 1965, used by primer3 up to
+                and including release 1.1.0.
+             1  SantaLucia 1998
+             2  Owczarzy et al., 2004
+
+    Examples:
+        >>> sequtils.tm('AGGATAAGAGATAGATTT')
+        39.31
+    """
+    assert len(seq) > 1
+    assert all([s in 'ACGTN' for s in seq.upper()])
+    system = platform.system()
+    prog = os.path.join(os.path.dirname(__file__), 'bin', system, 'oligotm')
+    opts = '-mv {} -dv {} -n {} -d {} -tp {} -sc {}'.format(mv, dv, n, d, tp, sc)
+    res = os.popen('{} {} {} 2>/dev/null'.format(prog, opts, seq)).read().rstrip()
+    return float(res)
