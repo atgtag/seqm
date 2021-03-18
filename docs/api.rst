@@ -29,6 +29,8 @@ Sequence Composition Metrics
 
 .. autofunction:: zipsize
 
+.. autofunction:: tm
+
 
 Domain Conversion
 =================
